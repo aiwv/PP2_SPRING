@@ -1,0 +1,21 @@
+import re
+f = open('./input.txt', 'r', encoding='utf-8')
+text = f.read()
+name = re.search(r"Филиал ТОО.+", text)
+binnum = re.search(r"\d{12}", text)
+title = re.findall(r"\d+\.\n(.+)", text)
+cnt = re.findall(r"\d\,0{3}", text)
+unit = re.findall(r"x\s(.+)\,0{2}", text)
+total = re.findall(r"Стоимость\n(.+),0{2}", text)
+date = re.search(r"\d\d\.\d\d\.\d\d\d\d\s\d\d\:\d\d\:\d\d", text)
+adress = re.search(r"г\..+", text)
+
+print(name.group())
+print(binnum.group())
+for i in range(len(title)):
+    print("1. Title: ", title[i])
+    print("2. Cout: ", cnt[i])
+    print("3. Unit price: ", unit[i])
+    print("4. Total price: ", total[i])
+print("Date: ", date.group())
+print("Adress: ", adress.group())
