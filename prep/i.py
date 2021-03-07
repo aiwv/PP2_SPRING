@@ -1,0 +1,6 @@
+n = int(input())
+A = input().split()
+k = int(input())
+n1 = int("".join(A[:k]))
+n2 = int("".join(A[k:]))
+print(n1*n2)
