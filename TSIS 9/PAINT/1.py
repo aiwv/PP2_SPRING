@@ -97,7 +97,7 @@ while True:
                 first = last
         if event.type == MOUSEBUTTONUP:
             if figure == "circle":
-                pygame.draw.circle(SCREEN, brush_color, first, abs(first[0]-last[0]), 2)
+                pygame.draw.circle(SCREEN, brush_color, first, 2*abs(first[0]-last[0]), 2)
             if figure == "rectangle":
                 pygame.draw.rect(SCREEN, brush_color, [first[0], first[1], abs(last[0]-first[0]), abs(last[1]-first[1])], 2)
             first = None

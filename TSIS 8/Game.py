@@ -129,19 +129,19 @@ while True:
         coin.rect.center = (random.randint(100, SCREEN_WIDTH - 100), random.randint(50, SCREEN_HEIGHT - 50))
 
     #To be run if collision occurs between Player and Enemy
-    if pygame.sprite.spritecollideany(P1, enemies):
-          pygame.mixer.Sound('crash.wav').play()
-          time.sleep(1)
+    # if pygame.sprite.spritecollideany(P1, enemies):
+    #       pygame.mixer.Sound('crash.wav').play()
+    #       time.sleep(1)
                    
-          DISPLAYSURF.fill(RED)
-          DISPLAYSURF.blit(game_over, (30,250))
+    #       DISPLAYSURF.fill(RED)
+    #       DISPLAYSURF.blit(game_over, (30,250))
           
-          pygame.display.update()
-          for entity in all_sprites:
-                entity.kill() 
-          time.sleep(2)
-          pygame.quit()
-          sys.exit()        
+    #       pygame.display.update()
+    #       for entity in all_sprites:
+    #             entity.kill() 
+    #       time.sleep(2)
+    #       pygame.quit()
+    #       sys.exit()        
         
     pygame.display.update()
     FramePerSec.tick(FPS)

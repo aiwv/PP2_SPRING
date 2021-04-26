@@ -125,7 +125,6 @@ def play():
         screen.fill((165, 206, 216))
         sc1=snake1.score//3
         sc2=snake2.score//3
-        print (snake1.speed, snake2.speed)
         if sc1 > sc2 or sc2 > sc1:
             pt = True
         if pt == True and sc1 == sc2:
